@@ -51,7 +51,7 @@ $(document).ready(function() {
         // make a call to api to update an existing product
 
         $.ajax({
-            url: "/" + productId,
+            url: "/:" + productId,
             dataType: "json",
             type: "PUT",
             contentType: "application/json",

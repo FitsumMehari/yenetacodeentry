@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $("#addForm").submit(function(e) {
         e.preventDefault();
-        // get all the inputs into an array.
+        // get all the inputs 
 
         var productDetails = {};
         const pName = $("#pName").val();
@@ -15,7 +15,7 @@ $(document).ready(function() {
         productDetails["pQuantity"] = pQuantity;
 
         console.log(productDetails);
-
+        // make a call to api to add a new product
         $.ajax({
             url: "/",
             dataType: "json",

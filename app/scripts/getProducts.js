@@ -1,4 +1,7 @@
 $(document).ready(function() {
+
+    // make a call to api to get all products
+
     $.ajax({
         url: "/getProducts",
         dataType: "json",
@@ -13,6 +16,8 @@ $(document).ready(function() {
         },
     });
 });
+
+// update the products table
 
 function refreshProductsList(data) {
     data.forEach((product) => {
@@ -42,12 +47,17 @@ function refreshProductsList(data) {
     });
 }
 
+// code for product deletion
+
 function deleteProduct(productid) {
     var decision = confirm("Are you sure to remove the product?");
     if (!decision) {
         return;
     } else {
         console.log(productid);
+
+        // make a call to api to delete a product from db
+
         $.ajax({
             url: "/:" + productid,
             type: "DELETE",

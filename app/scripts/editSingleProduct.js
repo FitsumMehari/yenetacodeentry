@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    // get url parameters, which is the id
     $.urlParam = function(name) {
         var results = new RegExp("[?&]" + name + "=([^&#]*)").exec(
             window.location.href
@@ -11,6 +12,8 @@ $(document).ready(function() {
     };
 
     var productId = $.urlParam("id");
+
+    // make a call to api
 
     $.ajax({
         url: "/getProduct:" + productId,
@@ -45,6 +48,8 @@ $(document).ready(function() {
 
         console.log(productDetails);
 
+        // make a call to api to update an existing product
+
         $.ajax({
             url: "/" + productId,
             dataType: "json",
@@ -68,6 +73,8 @@ $(document).ready(function() {
         });
     });
 });
+
+// update the displayed details
 
 function refreshProductsForm(data) {
     const pName = data.pName;

@@ -5,14 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Product PMS</title>
-    <script type="text/javascript" src="../scripts/bootstrap.js"></script>
     <script type="text/javascript" src="../scripts/jquery-3.7.1.min.js"></script>
     <link rel="stylesheet" href="../styles/bootstrap.css" />
+    <script type="text/javascript" src="../scripts/bootstrap.js"></script>
+    <script type="text/javascript" src="../scripts/editSingleProduct.js"></script>
 </head>
 
 <body class="container">
     <h1 class="header">Edit Product</h1>
-    <form>
+    <form id="editForm">
         <div class="form-group">
             <label for="pName">Product Name</label>
             <input type="text" class="form-control" id="pName" placeholder="Name">
@@ -26,10 +27,10 @@
             <input type="text" class="form-control" id="pPrice" placeholder="Price">
         </div>
         <div class="form-group">
-            <label for="pQuantity">Product Price</label>
+            <label for="pQuantity">Product Quantity</label>
             <input type="number" class="form-control" id="pQuantity" placeholder="Quantity">
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Edit</button>
         <a href="/pages/home.html" class="btn btn-light">Home Page</a>
     </form>
 

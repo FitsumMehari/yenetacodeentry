@@ -102,8 +102,7 @@ app.put("/:id", async(req, res) => {
         }, {
             new: true,
         });
-
-        res.status(200);
+        await product.then(res.status(200).json(product))
     } catch (err) {
         // next(err);
     }

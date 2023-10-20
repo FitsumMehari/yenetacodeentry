@@ -5,12 +5,12 @@ Live URL of deployed app: https://fitsumpms.onrender.com/
 
 ============================================
 
-Instructions
+Instructions to run the project locally
 ============
-clone the repo
+clone the repo,
 change directory to the project folder
-run 'npm i'
-run 'node index.js'
+run 'npm i',
+run 'node index.js' or 'npm start',
 the app will run on port 3000
 
 ++++++++++++SCREENSHOTS++++++++++++++

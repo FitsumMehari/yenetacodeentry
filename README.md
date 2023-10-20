@@ -1,6 +1,8 @@
 # yenetacodeentry
 Entry project on products management
 
+Live URL of deployed app: https://fitsumpms.onrender.com/
+
 ============================================
 
 Instructions

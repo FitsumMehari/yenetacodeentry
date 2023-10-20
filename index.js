@@ -93,7 +93,7 @@ app.post("/", async(req, res) => {
 app.put("/:id", async(req, res) => {
     console.log(req.params.id.substring(1));
     try {
-        const product = await Product.findOneAndUpdate({}, {
+        const product = await Product.findOneAndUpdate({ _id: req.params.id.substring(1) }, {
             pName: req.body.productDetails.pName,
             pDesc: req.body.productDetails.pDesc,
             pPrice: req.body.productDetails.pPrice,
@@ -102,7 +102,7 @@ app.put("/:id", async(req, res) => {
         }, {
             new: true,
         });
-        await product.then(res.status(200).json(product))
+        await product.then(res.status(200).json(product));
     } catch (err) {
         // next(err);
     }
